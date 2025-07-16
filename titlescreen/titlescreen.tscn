@@ -1,0 +1,119 @@
+[gd_scene load_steps=11 format=3 uid="uid://chhlowkth1j2v"]
+
+[ext_resource type="Script" uid="uid://feptet8hka8m" path="res://titlescreen.gd" id="1_8pdex"]
+[ext_resource type="FontFile" uid="uid://bgtnxkkh1sd58" path="res://bold-phobia-font/BoldPhobiaFreeRegular-R92PE.ttf" id="1_cjnew"]
+[ext_resource type="Texture2D" uid="uid://c31fmylb2q1uy" path="res://Space Background.png" id="2_goadl"]
+[ext_resource type="AudioStream" uid="uid://dinkkae3w8q3e" path="res://chiphead64 - 11pm.mp3" id="2_hxypl"]
+[ext_resource type="FontFile" uid="uid://bf8rmjc43on2v" path="res://space-nova-font/SpaceNova-6Rpd1.otf" id="3_hxypl"]
+[ext_resource type="Shader" uid="uid://cprdkosqmyenq" path="res://titlescreen.gdshader" id="4_o0614"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2bjoa"]
+texture = ExtResource("2_goadl")
+modulate_color = Color(0.623423, 0.602713, 0.616184, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jtfbd"]
+shader = ExtResource("4_o0614")
+shader_parameter/height = 3.0
+shader_parameter/speed = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hxypl"]
+bg_color = Color(0.353677, 0.496342, 0.578022, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_goadl"]
+bg_color = Color(0.431054, 0.571893, 0.685871, 1)
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_color = Color(0.275104, 0.214811, 0.523872, 0.6)
+shadow_size = 3
+shadow_offset = Vector2(0, 2)
+
+[node name="Titlescreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8pdex")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_hxypl")
+autoplay = true
+parameters/looping = true
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_2bjoa")
+
+[node name="Label" type="Label" parent="Panel"]
+material = SubResource("ShaderMaterial_jtfbd")
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -432.5
+offset_top = -182.5
+offset_right = 432.5
+offset_bottom = -29.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.522633, 0.0670385, 0.158967, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("3_hxypl")
+theme_override_font_sizes/font_size = 70
+text = "Extinction 
+Protocol"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -93.0
+offset_top = 19.0
+offset_right = 48.0
+offset_bottom = 143.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 30
+
+[node name="StartButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_hover_color = Color(0.147872, 0.240429, 0.26212, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_cjnew")
+theme_override_font_sizes/font_size = 17
+theme_override_styles/hover = SubResource("StyleBoxFlat_hxypl")
+theme_override_styles/normal = SubResource("StyleBoxFlat_goadl")
+text = "Start"
+
+[node name="QuitButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_hover_color = Color(0.147872, 0.240429, 0.26212, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_cjnew")
+theme_override_font_sizes/font_size = 17
+theme_override_styles/hover = SubResource("StyleBoxFlat_hxypl")
+theme_override_styles/normal = SubResource("StyleBoxFlat_goadl")
+text = "Quit
+"
+
+[connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
