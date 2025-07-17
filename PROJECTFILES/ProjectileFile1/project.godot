@@ -12,7 +12,7 @@ config_version=5
 
 config/name="GroupProject"
 config/version="v1.4-15-g2bbd129"
-run/main_scene="res://main.tscn"
+run/main_scene="uid://gkgyk4jmq3fe"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
