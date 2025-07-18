@@ -60,7 +60,7 @@ animation_name = "calf"
 
 [node name="Coin5" parent="Coins" instance=ExtResource("5_u7hr5")]
 position = Vector2(2880, 128)
-animation_name = "default"
+animation_name = "chick"
 
 [node name="Coin6" parent="Coins" instance=ExtResource("5_u7hr5")]
 position = Vector2(3136, -384)
