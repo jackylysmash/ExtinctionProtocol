@@ -11,8 +11,8 @@ config_version=5
 [application]
 
 config/name="Moddable Platformer"
-config/version="v1.4-15-g2bbd129"
-run/main_scene="uid://gkgyk4jmq3fe"
+config/version="v1.4"
+run/main_scene="res://main.tscn"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
