@@ -57,7 +57,7 @@ func _on_coin_collected():
 
 
 func set_collected_coins(coins: int):
-	%CollectedCoins.text = "Coins: " + str(coins)
+	%CollectedCoins.text = "Animals: " + str(coins)
 
 
 func _on_timer_added():

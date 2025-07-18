@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://dhcpt1kt8cs0g"]
+[gd_scene load_steps=16 format=4 uid="uid://dhcpt1kt8cs0g"]
 
 [ext_resource type="Texture2D" uid="uid://cv0qdykgrx51v" path="res://assets/Space Background BlueYellow.png" id="1_vivmo"]
 [ext_resource type="PackedScene" uid="uid://8st4scqt06l8" path="res://components/player/player.tscn" id="2_7yl00"]
@@ -8,8 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://danlrmsfmsros" path="res://spaces/tilemap.tscn" id="3_yfnmv"]
 [ext_resource type="PackedScene" uid="uid://dthyncc3spfks" path="res://spaces/dangerzone.tscn" id="4_2mg6t"]
 [ext_resource type="PackedScene" uid="uid://coq6d3u6wnvs2" path="res://components/platform/platform.tscn" id="4_gd51l"]
-[ext_resource type="PackedScene" uid="uid://daf24t18h3n5e" path="res://components/coin/coin.tscn" id="5_u7hr5"]
-[ext_resource type="Texture2D" uid="uid://bjqboxowe07lw" path="res://assets/items/crystal.png" id="6_kpi5m"]
+[ext_resource type="PackedScene" uid="uid://daf24t18h3n5e" path="res://components/coin.tscn" id="5_u7hr5"]
 [ext_resource type="PackedScene" uid="uid://jt80gv02u4f2" path="res://hud.tscn" id="6_mp7wy"]
 [ext_resource type="PackedScene" uid="uid://dk0xon0k7ga23" path="res://components/enemy/enemy.tscn" id="9_l6smt"]
 [ext_resource type="SpriteFrames" uid="uid://bo581k1esb50n" path="res://components/player/spriteframes-red.tres" id="9_qmofe"]
@@ -49,118 +48,80 @@ tile_map_data = PackedByteArray("AAAAAAUAAAACAAAAAAABAAUAAAACAAAAAAACAAUAAAACAAA
 [node name="Coins" type="Node2D" parent="."]
 
 [node name="Coin" parent="Coins" instance=ExtResource("5_u7hr5")]
-modulate = Color(1, 1, 0, 1)
 position = Vector2(1472, 320)
-texture = ExtResource("6_kpi5m")
-tint = Color(1, 1, 0, 1)
+animation_name = "chicken"
 
 [node name="Coin3" parent="Coins" instance=ExtResource("5_u7hr5")]
-modulate = Color(1, 1, 0, 1)
 position = Vector2(1600, 256)
-texture = ExtResource("6_kpi5m")
-tint = Color(1, 1, 0, 1)
+animation_name = "cow"
 
 [node name="Coin4" parent="Coins" instance=ExtResource("5_u7hr5")]
-modulate = Color(1, 1, 0, 1)
 position = Vector2(1728, 320)
-texture = ExtResource("6_kpi5m")
-tint = Color(1, 1, 0, 1)
+animation_name = "calf"
 
 [node name="Coin5" parent="Coins" instance=ExtResource("5_u7hr5")]
-modulate = Color(1, 1, 0, 1)
 position = Vector2(2880, 128)
-texture = ExtResource("6_kpi5m")
-tint = Color(1, 1, 0, 1)
+animation_name = "default"
 
 [node name="Coin6" parent="Coins" instance=ExtResource("5_u7hr5")]
-modulate = Color(1, 1, 0, 1)
 position = Vector2(3136, -384)
-texture = ExtResource("6_kpi5m")
-tint = Color(1, 1, 0, 1)
+animation_name = "default"
 
 [node name="Coin7" parent="Coins" instance=ExtResource("5_u7hr5")]
-modulate = Color(1, 1, 0, 1)
 position = Vector2(3392, 128)
-texture = ExtResource("6_kpi5m")
-tint = Color(1, 1, 0, 1)
+animation_name = "default"
 
 [node name="Coin12" parent="Coins" instance=ExtResource("5_u7hr5")]
-modulate = Color(1, 1, 0, 1)
 position = Vector2(3520, 128)
-texture = ExtResource("6_kpi5m")
-tint = Color(1, 1, 0, 1)
+animation_name = "default"
 
 [node name="Coin13" parent="Coins" instance=ExtResource("5_u7hr5")]
-modulate = Color(1, 1, 0, 1)
 position = Vector2(3264, 128)
-texture = ExtResource("6_kpi5m")
-tint = Color(1, 1, 0, 1)
+animation_name = "default"
 
 [node name="Coin14" parent="Coins" instance=ExtResource("5_u7hr5")]
-modulate = Color(1, 1, 0, 1)
 position = Vector2(3008, 128)
-texture = ExtResource("6_kpi5m")
-tint = Color(1, 1, 0, 1)
+animation_name = "default"
 
 [node name="Coin15" parent="Coins" instance=ExtResource("5_u7hr5")]
-modulate = Color(1, 1, 0, 1)
 position = Vector2(2752, 128)
-texture = ExtResource("6_kpi5m")
-tint = Color(1, 1, 0, 1)
+animation_name = "default"
 
 [node name="Coin16" parent="Coins" instance=ExtResource("5_u7hr5")]
-modulate = Color(1, 1, 0, 1)
 position = Vector2(3840, 832)
-texture = ExtResource("6_kpi5m")
-tint = Color(1, 1, 0, 1)
+animation_name = "default"
 
 [node name="Coin17" parent="Coins" instance=ExtResource("5_u7hr5")]
-modulate = Color(1, 1, 0, 1)
 position = Vector2(3712, 960)
-texture = ExtResource("6_kpi5m")
-tint = Color(1, 1, 0, 1)
+animation_name = "default"
 
 [node name="Coin20" parent="Coins" instance=ExtResource("5_u7hr5")]
-modulate = Color(1, 1, 0, 1)
 position = Vector2(3840, 704)
-texture = ExtResource("6_kpi5m")
-tint = Color(1, 1, 0, 1)
+animation_name = "default"
 
 [node name="Coin18" parent="Coins" instance=ExtResource("5_u7hr5")]
-modulate = Color(1, 1, 0, 1)
-position = Vector2(3456, 960)
-texture = ExtResource("6_kpi5m")
-tint = Color(1, 1, 0, 1)
+position = Vector2(3456, 961)
+animation_name = "default"
 
 [node name="Coin21" parent="Coins" instance=ExtResource("5_u7hr5")]
-modulate = Color(1, 1, 0, 1)
 position = Vector2(3584, 960)
-texture = ExtResource("6_kpi5m")
-tint = Color(1, 1, 0, 1)
+animation_name = "default"
 
 [node name="Coin19" parent="Coins" instance=ExtResource("5_u7hr5")]
-modulate = Color(1, 1, 0, 1)
 position = Vector2(3840, 960)
-texture = ExtResource("6_kpi5m")
-tint = Color(1, 1, 0, 1)
+animation_name = "default"
 
 [node name="Coin9" parent="Coins" instance=ExtResource("5_u7hr5")]
-modulate = Color(1, 1, 0, 1)
 position = Vector2(960, 576)
-texture = ExtResource("6_kpi5m")
-tint = Color(1, 1, 0, 1)
+animation_name = "default"
 
 [node name="Coin10" parent="Coins" instance=ExtResource("5_u7hr5")]
-modulate = Color(1, 1, 0, 1)
 position = Vector2(3008, -320)
-texture = ExtResource("6_kpi5m")
-tint = Color(1, 1, 0, 1)
+animation_name = "default"
 
 [node name="Coin11" parent="Coins" instance=ExtResource("5_u7hr5")]
-modulate = Color(1, 1, 0, 1)
 position = Vector2(3264, -320)
-texture = ExtResource("6_kpi5m")
-tint = Color(1, 1, 0, 1)
+animation_name = "default"
 
 [node name="Platforms" type="Node2D" parent="."]
 position = Vector2(1920, -64)
@@ -230,7 +191,6 @@ position_smoothing_enabled = true
 
 [node name="Enemy" parent="." instance=ExtResource("9_l6smt")]
 position = Vector2(1600, 704)
-player_loses_life = false
 
 [node name="Enemy2" parent="." instance=ExtResource("9_l6smt")]
 position = Vector2(1920, 576)
