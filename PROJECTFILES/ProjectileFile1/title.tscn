@@ -1,20 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://gkgyk4jmq3fe"]
+[gd_scene load_steps=8 format=3 uid="uid://gkgyk4jmq3fe"]
 
-[ext_resource type="Texture2D" uid="uid://csf1kif4bi3kb" path="res://assets/Space Background.png" id="1_kpexm"]
 [ext_resource type="Script" uid="uid://30usodo7iqj4" path="res://title.gd" id="1_mom7w"]
 [ext_resource type="AudioStream" uid="uid://l2a2ttce6h47" path="res://assets/items/chiphead64 - 11pm.mp3" id="2_7lgly"]
 [ext_resource type="Shader" uid="uid://ce07wfvtyq32l" path="res://title.gdshader" id="4_7lgly"]
-[ext_resource type="FontFile" uid="uid://bf8rmjc43on2v" path="res://assets/space-nova-font/SpaceNova-6Rpd1.otf" id="5_jil77"]
-[ext_resource type="FontFile" uid="uid://bgtnxkkh1sd58" path="res://assets/bold-phobia-font/BoldPhobiaFreeRegular-R92PE.ttf" id="6_16uvt"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2bjoa"]
-texture = ExtResource("1_kpexm")
 modulate_color = Color(0.623423, 0.602713, 0.616184, 1)
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_0824t"]
-shader = ExtResource("4_7lgly")
-shader_parameter/height = 3.0
-shader_parameter/speed = 2.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hxypl"]
 bg_color = Color(0.353677, 0.496342, 0.578022, 1)
@@ -29,6 +20,11 @@ corner_radius_bottom_left = 5
 shadow_color = Color(0.275104, 0.214811, 0.523872, 0.6)
 shadow_size = 3
 shadow_offset = Vector2(0, 2)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0824t"]
+shader = ExtResource("4_7lgly")
+shader_parameter/height = 3.0
+shader_parameter/speed = 2.0
 
 [node name="Titlescreen" type="Control"]
 layout_mode = 3
@@ -52,30 +48,6 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_2bjoa")
 
-[node name="Label" type="Label" parent="Panel"]
-material = SubResource("ShaderMaterial_0824t")
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -432.5
-offset_top = -182.5
-offset_right = 432.5
-offset_bottom = -29.5
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0.522633, 0.0670385, 0.158967, 1)
-theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
-theme_override_constants/outline_size = 7
-theme_override_fonts/font = ExtResource("5_jil77")
-theme_override_font_sizes/font_size = 94
-text = "Extinction 
-Protocol"
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 8
@@ -96,7 +68,6 @@ layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_hover_color = Color(0.147872, 0.240429, 0.26212, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("6_16uvt")
 theme_override_font_sizes/font_size = 17
 theme_override_styles/hover = SubResource("StyleBoxFlat_hxypl")
 theme_override_styles/normal = SubResource("StyleBoxFlat_goadl")
@@ -107,12 +78,23 @@ layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_hover_color = Color(0.147872, 0.240429, 0.26212, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("6_16uvt")
 theme_override_font_sizes/font_size = 17
 theme_override_styles/hover = SubResource("StyleBoxFlat_hxypl")
 theme_override_styles/normal = SubResource("StyleBoxFlat_goadl")
 text = "Quit
 "
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+material = SubResource("ShaderMaterial_0824t")
+layout_mode = 2
+theme_override_colors/font_color = Color(0.522633, 0.0670385, 0.158967, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 7
+theme_override_font_sizes/font_size = 94
+text = "Extinction 
+Protocol"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
