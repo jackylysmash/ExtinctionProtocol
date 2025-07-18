@@ -239,7 +239,6 @@ radius = 46.72
 [node name="Coin" type="Area2D"]
 collision_layer = 2
 script = ExtResource("1_4bks0")
-animation_name = null
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(8, 8)
