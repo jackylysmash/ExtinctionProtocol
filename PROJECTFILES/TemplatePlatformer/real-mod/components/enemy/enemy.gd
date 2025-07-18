@@ -27,6 +27,7 @@ var direction: int
 @onready var _right_ray := %RightRay
 
 
+
 func _set_speed(new_speed):
 	speed = new_speed
 	if not is_node_ready():

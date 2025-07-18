@@ -1,9 +1,10 @@
-[gd_scene load_steps=37 format=3 uid="uid://daf24t18h3n5e"]
+[gd_scene load_steps=38 format=3 uid="uid://daf24t18h3n5e"]
 
 [ext_resource type="Script" uid="uid://b4j8f10agdcvu" path="res://scripts/coin.gd" id="1_4bks0"]
 [ext_resource type="Texture2D" uid="uid://bhyrjylp0uktq" path="res://assets/animalsprites/Calf.png" id="2_ropfc"]
 [ext_resource type="Texture2D" uid="uid://37160xqgw5qu" path="res://assets/animalsprites/Chicken.png" id="2_u2mam"]
 [ext_resource type="Texture2D" uid="uid://ba5l83phb4lso" path="res://assets/animalsprites/Cow.png" id="4_dbufd"]
+[ext_resource type="AudioStream" uid="uid://bv6qhdv65p801" path="res://assets/items/collect-points-190037.mp3" id="5_dbufd"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uew53"]
 atlas = ExtResource("2_ropfc")
@@ -245,10 +246,13 @@ scale = Vector2(8, 8)
 sprite_frames = SubResource("SpriteFrames_a1xy7")
 animation = &"chicken"
 autoplay = "chicken"
-frame_progress = 0.341598
+frame_progress = 0.334822
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-6, 12)
 shape = SubResource("CircleShape2D_5w0o8")
+
+[node name="Pickup" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_dbufd")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
