@@ -14,7 +14,7 @@ modulate_color = Color(0.623423, 0.602713, 0.616184, 1)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_0824t"]
 shader = ExtResource("4_7lgly")
-shader_parameter/height = 3.0
+shader_parameter/height = 4.0
 shader_parameter/speed = 2.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hxypl"]

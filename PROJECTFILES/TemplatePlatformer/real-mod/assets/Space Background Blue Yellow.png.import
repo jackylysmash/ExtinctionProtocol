@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cv0qdykgrx51v"
-path="res://.godot/imported/Space Background BlueYellow.png-cef40f0a6ae37ea82efcf42f7fa66336.ctex"
+uid="uid://dsxxbauqik8ef"
+path="res://.godot/imported/Space Background Blue Yellow.png-807a3bf9f9fd182757f9d5fa3f303807.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Space Background BlueYellow.png"
-dest_files=["res://.godot/imported/Space Background BlueYellow.png-cef40f0a6ae37ea82efcf42f7fa66336.ctex"]
+source_file="res://assets/Space Background Blue Yellow.png"
+dest_files=["res://.godot/imported/Space Background Blue Yellow.png-807a3bf9f9fd182757f9d5fa3f303807.ctex"]
 
 [params]
 

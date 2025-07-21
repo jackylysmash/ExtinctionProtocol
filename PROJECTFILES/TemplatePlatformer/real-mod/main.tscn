@@ -1,6 +1,5 @@
 [gd_scene load_steps=16 format=4 uid="uid://dhcpt1kt8cs0g"]
 
-[ext_resource type="Texture2D" uid="uid://cv0qdykgrx51v" path="res://assets/Space Background BlueYellow.png" id="1_vivmo"]
 [ext_resource type="PackedScene" uid="uid://8st4scqt06l8" path="res://components/player/player.tscn" id="2_7yl00"]
 [ext_resource type="PackedScene" uid="uid://jnrusvm3gric" path="res://spaces/background.tscn" id="2_tb5a2"]
 [ext_resource type="AudioStream" uid="uid://cw5b4jch3wiv0" path="res://assets/items/ambient-space-arpeggio-350710.mp3" id="3_w48qg"]
@@ -15,14 +14,17 @@
 [ext_resource type="PackedScene" uid="uid://beuisy5yrw0bq" path="res://components/flag/flag.tscn" id="12_dkbog"]
 [ext_resource type="Script" uid="uid://boqbxvbja884q" path="res://scripts/multiplayer_camera.gd" id="13_0d2mj"]
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ycdy4"]
+load_path = "res://.godot/imported/Space Background Blue Yellow.png-807a3bf9f9fd182757f9d5fa3f303807.ctex"
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2cqfq"]
-texture = ExtResource("1_vivmo")
+texture = SubResource("CompressedTexture2D_ycdy4")
 
 [node name="Main" type="Node2D"]
 
 [node name="Panel" type="Panel" parent="."]
-offset_top = -4989.0
-offset_right = 13333.0
+offset_top = -5051.0
+offset_right = 13285.0
 offset_bottom = 1142.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_2cqfq")
 
