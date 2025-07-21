@@ -241,18 +241,18 @@ radius = 46.72
 collision_layer = 2
 script = ExtResource("1_4bks0")
 
+[node name="animalcollect" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_dbufd")
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(8, 8)
 sprite_frames = SubResource("SpriteFrames_a1xy7")
 animation = &"chicken"
 autoplay = "chicken"
-frame_progress = 0.334822
+frame_progress = 0.908994
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-6, 12)
 shape = SubResource("CircleShape2D_5w0o8")
-
-[node name="Pickup" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("5_dbufd")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://gkgyk4jmq3fe"]
+[gd_scene load_steps=12 format=3 uid="uid://gkgyk4jmq3fe"]
 
 [ext_resource type="Texture2D" uid="uid://csf1kif4bi3kb" path="res://assets/Space Background.png" id="1_kpexm"]
 [ext_resource type="Script" uid="uid://30usodo7iqj4" path="res://title.gd" id="1_mom7w"]
 [ext_resource type="AudioStream" uid="uid://l2a2ttce6h47" path="res://assets/items/chiphead64 - 11pm.mp3" id="2_7lgly"]
+[ext_resource type="AudioStream" uid="uid://5qnj64nmnx85" path="res://assets/items/button-305770.mp3" id="3_0824t"]
 [ext_resource type="Shader" uid="uid://ce07wfvtyq32l" path="res://title.gdshader" id="4_7lgly"]
 [ext_resource type="FontFile" uid="uid://bf8rmjc43on2v" path="res://assets/space-nova-font/SpaceNova-6Rpd1.otf" id="5_jil77"]
 [ext_resource type="FontFile" uid="uid://bgtnxkkh1sd58" path="res://assets/bold-phobia-font/BoldPhobiaFreeRegular-R92PE.ttf" id="6_16uvt"]
@@ -42,6 +43,9 @@ script = ExtResource("1_mom7w")
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_7lgly")
 autoplay = true
+
+[node name="Buttonsound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_0824t")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
