@@ -75,3 +75,7 @@ func set_lives(lives: int):
 
 func _on_game_ended(ending: Global.Endings):
 	ending_labels[ending].visible = true
+
+
+func _on_button_pressed() -> void:
+	get_tree().reload_current_scene()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://jt80gv02u4f2"]
+[gd_scene load_steps=22 format=3 uid="uid://jt80gv02u4f2"]
 
 [ext_resource type="Script" uid="uid://bi5370kgl6xcs" path="res://scripts/hud.gd" id="1_8msyy"]
 [ext_resource type="Texture2D" uid="uid://bwt5tfdwi6444" path="res://assets/input-prompts/keyboard_arrow_left.svg" id="2_btdwd"]
@@ -21,6 +21,39 @@
 default_font_size = 64
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b8smf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w71nf"]
+bg_color = Color(0.219918, 0.256627, 0.5299, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_615i1"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pw7dr"]
+bg_color = Color(0.100399, 0.090489, 0.197968, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource("1_8msyy")
@@ -111,36 +144,63 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -210.0
-offset_top = -81.0
-offset_right = 210.0
-offset_bottom = 98.0
+offset_left = -280.5
+offset_top = -340.0
+offset_right = 280.5
+offset_bottom = -161.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
-theme_override_font_sizes/font_size = 64
+theme_override_fonts/font = ExtResource("2_w71nf")
+theme_override_font_sizes/font_size = 100
 text = "You Win!"
 horizontal_alignment = 1
 
 [node name="LoseEnding" type="Label" parent="."]
 unique_name_in_owner = true
-visible = false
 top_level = true
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -210.0
-offset_top = -81.0
-offset_right = 210.0
-offset_bottom = 98.0
+offset_left = -378.5
+offset_top = -340.0
+offset_right = 378.5
+offset_bottom = -161.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
-theme_override_font_sizes/font_size = 64
-text = "You Lose!"
+theme_override_fonts/font = ExtResource("2_w71nf")
+theme_override_font_sizes/font_size = 100
+text = "Game over"
 horizontal_alignment = 1
+
+[node name="Panel" type="Panel" parent="LoseEnding"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -583.0
+offset_top = -205.0
+offset_right = 574.0
+offset_bottom = 698.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="LoseEnding"]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 315.0
+offset_right = 542.0
+offset_bottom = 408.0
+theme_override_fonts/font = ExtResource("9_615i1")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/hover = SubResource("StyleBoxFlat_w71nf")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_615i1")
+theme_override_styles/normal = SubResource("StyleBoxFlat_pw7dr")
+text = "Try Again?"
 
 [node name="CollectedCoins" type="Label" parent="."]
 unique_name_in_owner = true
@@ -204,3 +264,5 @@ texture_pressed = ExtResource("8_me7no")
 passby_press = true
 action = "player_1_jump"
 visibility_mode = 1
+
+[connection signal="pressed" from="LoseEnding/Button" to="." method="_on_button_pressed"]
