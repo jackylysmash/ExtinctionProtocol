@@ -133,7 +133,9 @@ stretch_mode = 5
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_fonts/font = ExtResource("9_615i1")
-text = "Press any key to start"
+text = "34 Animals To Collect
+Press any key to start"
+horizontal_alignment = 1
 
 [node name="WinEnding" type="Label" parent="."]
 unique_name_in_owner = true

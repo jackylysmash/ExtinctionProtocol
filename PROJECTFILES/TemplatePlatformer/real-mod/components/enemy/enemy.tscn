@@ -60,6 +60,7 @@ script = ExtResource("1_urf0o")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
+modulate = Color(0.196397, 0.645412, 0.848594, 1)
 position = Vector2(0, 6)
 sprite_frames = SubResource("SpriteFrames_2xpc5")
 animation = &"walk"
