@@ -1,9 +1,10 @@
-[gd_scene load_steps=38 format=3 uid="uid://daf24t18h3n5e"]
+[gd_scene load_steps=49 format=3 uid="uid://daf24t18h3n5e"]
 
 [ext_resource type="Script" uid="uid://b4j8f10agdcvu" path="res://scripts/coin.gd" id="1_4bks0"]
 [ext_resource type="Texture2D" uid="uid://bhyrjylp0uktq" path="res://assets/animalsprites/Calf.png" id="2_ropfc"]
 [ext_resource type="Texture2D" uid="uid://37160xqgw5qu" path="res://assets/animalsprites/Chicken.png" id="2_u2mam"]
 [ext_resource type="Texture2D" uid="uid://ba5l83phb4lso" path="res://assets/animalsprites/Cow.png" id="4_dbufd"]
+[ext_resource type="Texture2D" uid="uid://b6t2wsewbbu20" path="res://assets/animalsprites/Chick.png" id="4_uew53"]
 [ext_resource type="AudioStream" uid="uid://bv6qhdv65p801" path="res://assets/items/collect-points-190037.mp3" id="5_dbufd"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uew53"]
@@ -45,6 +46,46 @@ region = Rect2(128, 33, 32, 27)
 [sub_resource type="AtlasTexture" id="AtlasTexture_k4bje"]
 atlas = ExtResource("2_ropfc")
 region = Rect2(160, 33, 32, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h5hdd"]
+atlas = ExtResource("4_uew53")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qns7k"]
+atlas = ExtResource("4_uew53")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qrhga"]
+atlas = ExtResource("4_uew53")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uyl76"]
+atlas = ExtResource("4_uew53")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sc17f"]
+atlas = ExtResource("4_uew53")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_inlvb"]
+atlas = ExtResource("4_uew53")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hixd7"]
+atlas = ExtResource("4_uew53")
+region = Rect2(32, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f7ai2"]
+atlas = ExtResource("4_uew53")
+region = Rect2(48, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rx2is"]
+atlas = ExtResource("4_uew53")
+region = Rect2(64, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ee3th"]
+atlas = ExtResource("4_uew53")
+region = Rect2(80, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_khs0j"]
 atlas = ExtResource("2_u2mam")
@@ -165,6 +206,41 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_h5hdd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qns7k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qrhga")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uyl76")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sc17f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_inlvb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hixd7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f7ai2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rx2is")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ee3th")
+}],
+"loop": true,
+"name": &"chick",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_khs0j")
 }, {
 "duration": 1.0,
@@ -247,9 +323,8 @@ stream = ExtResource("5_dbufd")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(8, 8)
 sprite_frames = SubResource("SpriteFrames_a1xy7")
-animation = &"chicken"
+animation = &"chick"
 autoplay = "chicken"
-frame_progress = 0.908994
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-6, 12)

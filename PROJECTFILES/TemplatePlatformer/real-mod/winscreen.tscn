@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bq6t07gbhwc3b"]
+
+[ext_resource type="Texture2D" uid="uid://c6trjljljgq8l" path="res://assets/pixil-frame-0.png" id="1_y55kr"]
+[ext_resource type="AudioStream" uid="uid://dutbjjsqptfx1" path="res://assets/items/level-win-6416.mp3" id="2_h3yos"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h3yos"]
+texture = ExtResource("1_y55kr")
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Panel" type="Panel" parent="."]
+custom_minimum_size = Vector2(1080, 1080)
+offset_left = 450.0
+offset_right = 1530.0
+offset_bottom = 1080.0
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("StyleBoxTexture_h3yos")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_h3yos")
+autoplay = true

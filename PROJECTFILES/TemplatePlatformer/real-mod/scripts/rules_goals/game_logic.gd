@@ -85,6 +85,7 @@ func _on_coin_collected():
 func _on_flag_raised(flag: Flag):
 	if _check_win_conditions(flag_to_win if flag_to_win else flag):
 		Global.game_ended.emit(Global.Endings.WIN)
+		get_tree().change_scene_to_file("res://winscreen.tscn")
 	elif flag_to_win == null or flag == flag_to_win:
 		# Put the ending flag back if the player hasn't satisfied conditions.
 		flag.flag_position = Flag.FlagPosition.DOWN
